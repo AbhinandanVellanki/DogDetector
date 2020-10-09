@@ -16,7 +16,7 @@ keras
 
 $ conda install tensorflow numpy scipy opencv pillow matplotlib h5py keras
 
-Downgrade Packages for smoother execution:
+Downgrade Packages for successful execution:
 
 $ pip install tensorflow==1.14.0
 $ pip install keras==2.2.0
