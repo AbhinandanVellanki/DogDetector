@@ -20,6 +20,7 @@ Downgrade Packages for smoother execution:
 
 $ pip install tensorflow==1.14.0
 $ pip install keras==2.2.0
+$ pip install keras_applications==1.0.4
 
 # Install Image AI Library:
 
