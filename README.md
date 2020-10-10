@@ -1,5 +1,7 @@
 # DogDetector
 
+Importable module designed to detect dogs at a single frame of video or a single image and return a list of bounding boxes for each dog detected.
+
 # Create Virtual Env:
 $ conda create -n retinanet python=3.6 anaconda
 $ source activate retinanet
