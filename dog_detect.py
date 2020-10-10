@@ -28,5 +28,5 @@ if __name__ == '__main__':
     dogdetector=Detector()
     image_frame='test1.jpg'
     result='result.png'
-    detected_boxes=dogdetector.detect(input_path=image, output_path=result)
+    detected_boxes=dogdetector.detect(input_path=image_frame, output_path=result)
     print(len(detected_boxes),"dogs detected at:", detected_boxes)
