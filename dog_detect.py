@@ -1,4 +1,5 @@
 from imageai.Detection import ObjectDetection
+import time
 
 class Detector():
     def __init__(self):
@@ -25,8 +26,12 @@ class Detector():
 
 if __name__ == '__main__':
     #define unit test case here
+    t1=time.time()
     dogdetector=Detector()
+    print("Initialization Time: ", time.time()-t1)
     image_frame='test1.jpg'
     result='result.png'
+    t1=time.time()
     detected_boxes=dogdetector.detect(input_path=image_frame, output_path=result)
+    print("Inference Time: ", time.time()-t1)
     print(len(detected_boxes),"dogs detected at:", detected_boxes)
