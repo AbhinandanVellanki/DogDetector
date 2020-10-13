@@ -27,7 +27,7 @@ class Detector():
                                                                     input_image= img,
                                                                     output_type = "array",
                                                                     custom_objects=self.custom_objects,
-                                                                    minimum_percentage_probability=45)
+                                                                    minimum_percentage_probability=80)
         bounding_boxes=[]
         print(detections)
         for d in detections:
