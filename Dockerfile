@@ -16,6 +16,8 @@ RUN pip3 install -r requirements.txt
 
 RUN apt -y install cmake
 
-RUN pip3 install opencv-python 
+RUN apt-get install -y libsm6 libxext6 libxrender-dev
+
+RUN pip3 install opencv-python==4.2.0.34
 
 ENTRYPOINT bash
