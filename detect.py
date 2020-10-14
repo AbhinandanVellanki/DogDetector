@@ -8,14 +8,13 @@ class Detector():
     def __init__(self):
         ## Set up detector
         self.detector = ObjectDetection()
-        self.detector.setModelTypeAsRetinaNet()
-        
 
         # Load model
+        #self.detector.setModelTypeAsYOLOv3()
         self.detector.setModelTypeAsRetinaNet()
         model_path = 'resnet50_coco_best_v2.0.1.h5'
         self.detector.setModelPath(os.path.join(os.getcwd(),model_path))
-        self.detector.loadModel()
+        self.detector.loadModel(detection_speed='fast')
 
         # Set custom object detection for dogs
         # For more options, see: https://github.com/OlafenwaMoses/ImageAI/tree/master/imageai/Detection#---custom-object-detection
@@ -29,7 +28,6 @@ class Detector():
                                                                     custom_objects=self.custom_objects,
                                                                     minimum_percentage_probability=80)
         bounding_boxes=[]
-        print(detections)
         for d in detections:
             bounding_boxes.append(d['box_points'])
         return bounding_boxes

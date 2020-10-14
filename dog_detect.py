@@ -23,7 +23,6 @@ class Detector():
         # Detect
         detections = self.detector.detectCustomObjectsFromImage(input_image=input_path, output_image_path=output_path, custom_objects=self.custom_objects, minimum_percentage_probability=45)
         bounding_boxes=[]
-        print(detections)
         for d in detections:
             bounding_boxes.append(d['box_points'])
         return bounding_boxes
@@ -32,7 +31,7 @@ if __name__ == '__main__':
     #define unit test case here
     t1=time.time()
     dogdetector=Detector()
-    print("Initialization Time: ", time.time()-t1)
+    print("Detector Class initialized in: ", time.time()-t1, "s")
     image_frame='test1.jpg'
     result='result.png'
     t1=time.time()
