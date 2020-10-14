@@ -38,4 +38,8 @@ YOLO v3: https://github.com/OlafenwaMoses/ImageAI/releases/download/essential-v4
 
 $ pip install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl
 
+# export and import docker image
 
+docker save -o <path for generated tar file> <image name>
+
+docker load -i <path to image tar file>

@@ -1,0 +1,7 @@
+CAMERA:
+  IP:
+    _1: '192.168.50.108'
+  USERNAME:
+    _1: 'admin'
+  PASSWORD:
+    _1: 'admin888888'
