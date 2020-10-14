@@ -12,7 +12,8 @@ class Detector():
         # Load model
         #self.detector.setModelTypeAsYOLOv3()
         self.detector.setModelTypeAsRetinaNet()
-        model_path = 'resnet50_coco_best_v2.0.1.h5'
+        model_name= 'resnet50_coco_best_v2.0.1.h5' #SET TO NAME OF DESIRED MODEL OF USE
+        model_path=os.path.join(os.getcwd(), model_name)
         self.detector.setModelPath(os.path.join(os.getcwd(),model_path))
         self.detector.loadModel(detection_speed='fast')
 
