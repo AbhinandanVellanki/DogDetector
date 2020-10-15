@@ -27,7 +27,7 @@ $ pip install tensorflow==1.14.0
 $ pip install keras==2.2.0
 $ pip install keras_applications==1.0.4
 
-# Download Trained Models:
+# Download Trained Models
 
 Retinanet: https://github.com/OlafenwaMoses/ImageAI/releases/download/1.0/resnet50_coco_best_v2.0.1.h5
 
