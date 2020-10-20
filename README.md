@@ -1,33 +1,12 @@
-# DogDetector
+# DogDetector:
 
 Importable module designed to detect dogs at a single frame of video or a single image and return a list of bounding boxes for each dog detected.
 
-# Create Virtual Env:
-`$ conda create -n retinanet python=3.6 anaconda`
-`$ source activate retinanet`
+# Pull Docker Image:
+`$chmod +x start.sh`
+`$./start.sh`
 
-# Packages Required:
-1. TensorFlow
-2. Numpy
-3. scipy
-4. opencv
-5. pillow
-6. matplotlib
-7. h5py
-8. keras
-
-`$ conda install tensorflow numpy scipy opencv pillow matplotlib h5py keras`
-
-Downgrade Packages for successful execution:
-
-`$ pip install tensorflow==1.14.0`
-  
-  TO USE GPU: `$ pip install tensorflow-gpu==1.14.0`
-
-`$ pip install keras==2.2.0`
-`$ pip install keras_applications==1.0.4`
-
-# Download Trained Models
+# Download Trained Models:
 
 Retinanet: https://github.com/OlafenwaMoses/ImageAI/releases/download/1.0/resnet50_coco_best_v2.0.1.h5
 
@@ -44,8 +23,20 @@ YOLO v3: https://github.com/OlafenwaMoses/ImageAI/releases/download/essential-v4
 
 `$ pip install https://github.com/OlafenwaMoses/ImageAI/releases/download/2.0.1/imageai-2.0.1-py3-none-any.whl`
 
-# export and import docker image
+# export and import docker image:
 
 docker save -o <path for generated tar file> <image name>
 
 docker load -i <path to image tar file>
+  
+# Run Trainer:
+import Trainer from train.py
+trainer_obj=Trainer()
+trainer_obj.train()
+
+# Run Detector:
+import Detector from detect.py
+detector_obj=Detector()
+bounding_boxes = detector_obj.detect(img=<image/frame>) 
+
+

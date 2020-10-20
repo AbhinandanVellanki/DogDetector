@@ -12,10 +12,10 @@ class Detector():
         # Load model
         self.detector.setModelTypeAsYOLOv3()
         #self.detector.setModelTypeAsRetinaNet()
-        model_name= 'pretrained-yolov3.h5.h5' #SET TO NAME OF DESIRED MODEL OF USE
+        model_name= 'pretrained-yolov3.h5' #SET TO NAME OF DESIRED MODEL OF USE
         model_path=os.path.join(os.getcwd(), model_name)
         self.detector.setModelPath(os.path.join(os.getcwd(),model_path))
-        self.detector.loadModel(detection_speed='fast')
+        self.detector.loadModel()
 
         # Set custom object detection for dogs
         # For more options, see: https://github.com/OlafenwaMoses/ImageAI/tree/master/imageai/Detection#---custom-object-detection
