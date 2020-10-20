@@ -8,5 +8,7 @@ h5py
 #tensorflow==1.14.0
 #tensorflow-gpu==1.14.0
 keras==2.2.0
+tensorflow_gpu==1.13.1
 keras_applications==1.0.4
+keras_preprocessing==1.0.2
 imageai
