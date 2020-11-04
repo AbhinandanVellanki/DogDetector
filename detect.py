@@ -12,7 +12,7 @@ class Detector():
         # Load model
         self.detector.setModelTypeAsYOLOv3()
         #self.detector.setModelTypeAsRetinaNet()
-        model_name= 'pretrained-yolov3.h5' #SET TO NAME OF DESIRED MODEL OF USE
+        model_name= 'yolov3-dogs.h5' #SET TO NAME OF DESIRED MODEL OF USE
         model_path=os.path.join(os.getcwd(), model_name)
         self.detector.setModelPath(os.path.join(os.getcwd(),model_path))
         self.detector.loadModel()

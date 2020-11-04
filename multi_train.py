@@ -6,8 +6,8 @@ class Trainer():
         self.trainer = DetectionModelTrainer()
         self.trainer.setModelTypeAsYOLOv3()
         # Set name of dataset directory
-        self.trainer.setDataDirectory(data_directory="wheelchair_dataset")
-        self.trainer.setTrainConfig(object_names_array=['wheelchair'], batch_size=128, num_experiments=10, train_from_pretrained_model='pretrained-yolov3.h5')
+        self.trainer.setDataDirectory(data_directory="wheels_dataset")
+        self.trainer.setTrainConfig(object_names_array=['wheelchair', 'pull trolley', 'push trolley'], batch_size=8, num_experiments=10, train_from_pretrained_model='wheels-yolov3.h5')
 
     def train(self):
         self.trainer.trainModel()

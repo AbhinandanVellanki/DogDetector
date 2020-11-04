@@ -7,7 +7,7 @@ class Trainer():
         self.trainer.setModelTypeAsYOLOv3()
         # Set name of dataset directory
         self.trainer.setDataDirectory(data_directory="dog_dataset")
-        self.trainer.setTrainConfig(object_names_array=['dog'], batch_size=4, num_experiments=10, train_from_pretrained_model='pretrained-yolov3.h5')
+        self.trainer.setTrainConfig(object_names_array=['dog'], batch_size=4, num_experiments=10, train_from_pretrained_model='yolov3-dogs.h5')
 
     def train(self):
         self.trainer.trainModel()
